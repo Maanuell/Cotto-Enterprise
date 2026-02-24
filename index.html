@@ -3,1863 +3,932 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COTTO Enterprise | Quality Lubricant Oils – Wholesale & Retail</title>
-<meta name="description" content="COTTO Enterprise – Wholesale & Retail Lubricant Oil Suppliers. Stocking COTTO brand, Mobil, Total, Castrol and more. Based in Aba, Nigeria. Serving customers globally.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>COTTO Enterprise | Complete Lubricant Range – Mobil, Total, Castrol</title>
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ========== RESET & BASE ========== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Nunito Sans', sans-serif;
-  background: #fff;
-  color: #1a1a2e;
-  overflow-x: hidden;
-  font-size: 16px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ========== VARIABLES ========== */
 :root {
-  --navy: #1e3a5f;
-  --navy-dark: #122540;
-  --navy-light: #2a4f7e;
-  --gold: #c9922a;
-  --gold-light: #e8b44a;
+  --navy: #0B1F33;
+  --navy-light: #1A2F45;
+  --gold: #D4AF37;
+  --gold-light: #F4C542;
   --whatsapp: #25D366;
-  --whatsapp-dark: #1da851;
-  --call: #0066cc;
-  --call-dark: #0052a3;
-  --grey-bg: #f5f5f5;
-  --grey-light: #f9f9f9;
-  --text: #2d2d2d;
-  --text-muted: #666;
-  --border: #e0e0e0;
-  --shadow: 0 4px 20px rgba(30,58,95,0.10);
-  --shadow-hover: 0 8px 32px rgba(30,58,95,0.18);
-  --radius: 10px;
+  --call: #2563EB;
+  --bg-dark: #0A0F1A;
+  --card-bg: #111827;
+  --border-gold: rgba(212, 175, 55, 0.2);
+  --text-light: #F3F4F6;
+  --text-muted: #9CA3AF;
 }
 
-/* ========== TOP PROMO BAR ========== */
-.promo-bar {
-  background: var(--navy-dark);
-  color: rgba(255,255,255,0.85);
-  text-align: center;
-  padding: 8px 20px;
-  font-size: 13px;
-  letter-spacing: 0.3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.5;
 }
-.promo-bar i { color: var(--gold-light); }
-.promo-bar strong { color: #fff; }
 
-/* ========== NAV ========== */
-nav {
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navigation (simplified - keeping functional) */
+.nav {
+  background: rgba(11, 31, 51, 0.95);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--navy);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  border-bottom: 1px solid var(--border-gold);
 }
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+
+.nav-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 68px;
+  align-items: center;
+  padding: 16px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-.logo-wrap {
+
+.logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
 }
+
 .logo-icon {
   width: 44px;
   height: 44px;
-  background: var(--gold);
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--gold), #996515);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   font-size: 20px;
-  color: #fff;
-  letter-spacing: 1px;
-  flex-shrink: 0;
+  color: #000;
 }
-.logo-text { display: flex; flex-direction: column; }
-.logo-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
+
+.logo-text h2 {
   font-size: 20px;
-  color: #fff;
-  letter-spacing: 1.5px;
-  line-height: 1;
-  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.logo-tagline {
+
+.logo-text p {
   font-size: 10px;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 2px;
 }
+
 .nav-links {
   display: flex;
-  list-style: none;
-  gap: 4px;
-  align-items: center;
+  gap: 24px;
 }
+
 .nav-links a {
-  color: rgba(255,255,255,0.8);
+  color: var(--text-light);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: all 0.2s;
-  letter-spacing: 0.3px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
-.nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.12); color: #fff; }
-.nav-links .nav-cta {
-  background: var(--gold);
-  color: #fff;
-  padding: 9px 18px;
-  border-radius: 6px;
-  margin-left: 8px;
-}
-.nav-links .nav-cta:hover { background: var(--gold-light); }
-.hamburger {
-  display: none;
-  background: none;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 6px;
-  padding: 6px 10px;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-.mobile-menu {
-  display: none;
-  background: var(--navy-dark);
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-.mobile-menu.open { display: block; }
-.mobile-menu a {
-  display: block;
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  padding: 14px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: background 0.2s;
-}
-.mobile-menu a:hover { background: rgba(255,255,255,0.07); color: #fff; }
 
-/* ========== HERO ========== */
-#home {
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0B1F33, #0A1620);
   position: relative;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  background: var(--navy-dark);
 }
-.hero-bg {
+
+.hero::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.25) saturate(0.7);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
 }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(18,37,64,0.96) 0%, rgba(30,58,95,0.75) 50%, rgba(18,37,64,0.92) 100%);
-}
-/* Animated oil-drop pattern */
-.hero-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.04;
-  background-image: radial-gradient(circle, #fff 1px, transparent 1px);
-  background-size: 40px 40px;
-}
+
 .hero-content {
+  max-width: 800px;
   position: relative;
   z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 24px;
-  width: 100%;
 }
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(201,146,42,0.2);
-  border: 1px solid rgba(201,146,42,0.4);
-  color: var(--gold-light);
-  padding: 7px 18px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-.hero-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(40px, 7vw, 82px);
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.hero-title span { color: var(--gold-light); display: block; }
-.hero-sub {
-  font-size: clamp(18px, 2.5vw, 26px);
-  color: rgba(255,255,255,0.75);
-  font-weight: 300;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-.hero-desc {
-  font-size: 15px;
-  color: rgba(255,255,255,0.6);
-  max-width: 560px;
-  line-height: 1.8;
-  margin-bottom: 36px;
-}
-.hero-desc strong { color: rgba(255,255,255,0.9); }
-.hero-btns {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 56px;
-}
-.btn-wa {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--whatsapp);
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 28px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
-  transition: all 0.2s;
-  border: none;
-  cursor: pointer;
-}
-.btn-wa:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
-.btn-call {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--call);
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 28px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 20px rgba(0,102,204,0.3);
-  transition: all 0.2s;
-}
-.btn-call:hover { background: var(--call-dark); transform: translateY(-2px); }
-.btn-outline-white {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  border: 2px solid rgba(255,255,255,0.35);
-  transition: all 0.2s;
-}
-.btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
 
-/* Featured products strip */
-.hero-features {
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+  display: block;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-wa {
+  background: var(--whatsapp);
+  color: #000;
+}
+
+.btn-wa:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+}
+
+.btn-call {
+  background: var(--call);
+  color: white;
+}
+
+.btn-call:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--gold);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* Stats */
+.stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  max-width: 800px;
+  gap: 24px;
+  margin: 48px 0;
 }
-.hero-feat-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px;
-  padding: 18px 14px;
+
+.stat-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 24px;
   text-align: center;
-  backdrop-filter: blur(4px);
-  transition: background 0.2s;
-}
-.hero-feat-card:hover { background: rgba(255,255,255,0.10); }
-.hero-feat-icon { font-size: 26px; margin-bottom: 8px; }
-.hero-feat-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 4px;
-  line-height: 1.3;
-}
-.hero-feat-size {
-  font-size: 11px;
-  color: rgba(255,255,255,0.45);
 }
 
-/* ========== SECTIONS ========== */
-.section { padding: 80px 24px; }
-.section-alt { background: var(--grey-bg); }
-.container { max-width: 1200px; margin: 0 auto; }
-
-.section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+.stat-number {
+  font-size: 36px;
+  font-weight: 800;
   color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========== PRODUCT SECTIONS ========== */
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
   margin-bottom: 12px;
 }
-.section-tag::before {
-  content: '';
-  width: 24px;
-  height: 2px;
-  background: var(--gold);
-  border-radius: 2px;
+
+.section-title span {
+  color: var(--gold);
 }
-.section-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(30px, 4vw, 46px);
-  font-weight: 800;
-  color: var(--navy);
-  line-height: 1.1;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.section-title span { color: var(--gold); }
-.section-desc {
-  font-size: 16px;
+
+.section-sub {
   color: var(--text-muted);
-  line-height: 1.8;
-  max-width: 680px;
-}
-
-/* ========== ABOUT ========== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  margin-top: 48px;
-}
-.about-image-wrap {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow-hover);
-}
-.about-image-wrap img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-}
-.about-badge-float {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  background: var(--navy);
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 10px;
-  border-left: 4px solid var(--gold);
-}
-.about-badge-float .num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--gold-light);
-  line-height: 1;
-}
-.about-badge-float .lbl { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
-.about-body p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; font-size: 15px; }
-.about-body strong { color: var(--navy); }
-.about-pillars {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 28px;
-}
-.pillar {
-  background: var(--grey-light);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px;
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  transition: box-shadow 0.2s;
-}
-.pillar:hover { box-shadow: var(--shadow); }
-.pillar-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  background: rgba(30,58,95,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--navy);
-  font-size: 16px;
-  flex-shrink: 0;
-}
-.pillar h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
-.pillar p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-
-/* ========== BRAND LOGOS STRIP ========== */
-.brands-strip {
-  background: var(--navy);
-  padding: 32px 24px;
-}
-.brands-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.brands-label {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  white-space: nowrap;
-  margin-right: 8px;
-}
-.brand-pill {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 0.5px;
-}
-.brand-pill.own { background: var(--gold); border-color: var(--gold); }
-
-/* ========== PRODUCTS ========== */
-#products { background: var(--grey-light); }
-.products-intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   margin-bottom: 48px;
-  flex-wrap: wrap;
-  gap: 20px;
+  font-size: 16px;
+  max-width: 600px;
 }
-.contact-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--whatsapp);
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.contact-pill:hover { background: var(--whatsapp-dark); }
 
-/* Category */
-.cat-block { margin-bottom: 56px; }
-.cat-header {
+/* Brand Header */
+.brand-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 24px;
+  margin: 48px 0 32px;
   padding-bottom: 16px;
-  border-bottom: 2px solid var(--border);
-}
-.cat-logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 8px 16px;
-  min-width: 90px;
-  height: 52px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.cat-logo-wrap img {
-  max-height: 34px;
-  max-width: 110px;
-  object-fit: contain;
-  display: block;
-}
-.cat-logo-text {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: var(--navy);
-}
-.cat-own .cat-logo-text { color: var(--gold); }
-.cat-label {
-  font-size: 11px;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.own-badge {
-  background: var(--gold);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border-bottom: 2px solid var(--border-gold);
 }
 
+.brand-header h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand-header .badge {
+  background: var(--gold);
+  color: #000;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Product Grid */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
 }
 
+/* 2D Product Card - CLEAN, NO PHOTOS */
 .product-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0;
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.25s, transform 0.25s;
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  transition: all 0.3s;
 }
-.product-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
 
-.product-img-wrap {
-  background: #f8f8f8;
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+}
+
+/* 2D REPRESENTATION - Pure vector/icon based */
+.product-2d {
+  height: 160px;
+  background: linear-gradient(145deg, #1A2A3A, #0F1F2F);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 160px;
-  border-bottom: 1px solid var(--border);
   position: relative;
-  overflow: hidden;
+  border-bottom: 1px solid var(--border-gold);
 }
-.product-img-wrap img {
-  max-height: 130px;
-  max-width: 140px;
-  object-fit: contain;
-  transition: transform 0.3s;
-}
-.product-card:hover .product-img-wrap img { transform: scale(1.06); }
-.product-brand-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--navy);
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.product-brand-badge.own { background: var(--gold); }
 
-.product-info { padding: 16px; flex: 1; display: flex; flex-direction: column; }
-.product-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
-  line-height: 1.3;
+/* Oil canister icon - consistent, clean */
+.product-2d i {
+  font-size: 64px;
+  color: var(--gold);
+  opacity: 0.8;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
 }
-.product-sizes {
-  margin-top: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 10px;
-}
-.size-tag {
-  background: var(--grey-bg);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
+
+/* Viscosity badge */
+.viscosity-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 50px;
   font-size: 11px;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
-.product-inquire {
-  margin-top: 14px;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: var(--whatsapp);
-  color: #fff;
-  text-align: center;
+
+/* Brand indicator */
+.brand-indicator {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.2s;
-  border: none;
-  cursor: pointer;
-}
-.product-inquire:hover { background: var(--whatsapp-dark); }
-.product-inquire i { margin-right: 5px; }
-
-/* Other brands card */
-.other-brands-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
-  grid-column: 1 / -1;
-}
-.other-brands-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
-.other-brand-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-.ob-pill {
-  background: var(--grey-bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 8px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--navy);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* ========== GALLERY ========== */
-#gallery { background: #fff; }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 40px;
-}
-.gallery-item {
-  border-radius: var(--radius);
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/3;
-  background: var(--grey-bg);
-  box-shadow: var(--shadow);
-  cursor: pointer;
-}
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s;
-  display: block;
-}
-.gallery-item:hover img { transform: scale(1.07); }
-.gallery-item-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(18,37,64,0.7) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
-}
-.gallery-item:hover .gallery-item-overlay { opacity: 1; }
-.gallery-item-label {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-/* ========== CONTACT ========== */
-#contact { background: var(--grey-bg); }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 48px;
-  margin-top: 48px;
-  align-items: start;
-}
-.contact-info-wrap { display: flex; flex-direction: column; gap: 0; }
-
-.contact-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 20px;
-  margin-bottom: 14px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s;
-}
-.contact-card:hover { box-shadow: var(--shadow); }
-.contact-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.ci-wa { background: rgba(37,211,102,0.1); color: var(--whatsapp); }
-.ci-call { background: rgba(0,102,204,0.1); color: var(--call); }
-.ci-email { background: rgba(201,146,42,0.1); color: var(--gold); }
-.ci-loc { background: rgba(30,58,95,0.08); color: var(--navy); }
-.ci-hours { background: rgba(30,58,95,0.08); color: var(--navy); }
-.contact-detail-label { font-size: 11px; color: var(--text-muted); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-.contact-detail-val { font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none; display: block; margin-bottom: 2px; }
-a.contact-detail-val:hover { color: var(--gold); }
-.contact-detail-sub { font-size: 13px; color: var(--text-muted); }
-
-.cta-card-big {
-  background: var(--navy);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.cta-card-big p { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-.cta-btn-full {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.cta-btn-full.wa { background: var(--whatsapp); color: #fff; }
-.cta-btn-full.wa:hover { background: var(--whatsapp-dark); }
-.cta-btn-full.call { background: var(--call); color: #fff; }
-.cta-btn-full.call:hover { background: var(--call-dark); }
-
-/* Map */
-.map-placeholder {
-  background: var(--grey-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  gap: 8px;
-  margin-top: 14px;
-  overflow: hidden;
-}
-.map-placeholder iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: var(--radius);
-}
-
-/* Contact form */
-.contact-form-wrap {
-  background: #fff;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 36px 32px;
-  box-shadow: var(--shadow);
-}
-.form-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--navy);
+  color: rgba(255,255,255,0.5);
   text-transform: uppercase;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--grey-bg);
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.form-group { margin-bottom: 14px; }
-.form-group.full { grid-column: 1 / -1; }
-.form-label { display: block; font-size: 12px; font-weight: 700; color: var(--navy); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
-.form-input, .form-select, .form-textarea {
-  width: 100%;
-  border: 1.5px solid var(--border);
-  border-radius: 7px;
-  padding: 11px 14px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 14px;
-  color: var(--text);
-  background: var(--grey-light);
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  appearance: none;
-  resize: vertical;
-}
-.form-input:focus, .form-select:focus, .form-textarea:focus {
-  border-color: var(--navy);
-  background: #fff;
-}
-.form-textarea { min-height: 110px; }
-.form-submit {
-  width: 100%;
-  padding: 14px;
-  background: var(--navy);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 6px;
-  letter-spacing: 0.5px;
-}
-.form-submit:hover { background: var(--navy-light); }
-.form-success {
-  display: none;
-  background: rgba(37,211,102,0.1);
-  border: 1px solid rgba(37,211,102,0.3);
-  color: #1a7a3f;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 14px;
 }
 
-/* Hours table */
-.hours-table { width: 100%; border-collapse: collapse; }
-.hours-table td { padding: 4px 0; font-size: 13px; }
-.hours-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
-.hours-table .closed td:last-child { color: #c0392b; }
+.product-info {
+  padding: 20px;
+}
 
-/* ========== FOOTER ========== */
-footer {
-  background: var(--navy-dark);
-  color: rgba(255,255,255,0.8);
-  padding: 56px 24px 24px;
-}
-.footer-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  margin-bottom: 28px;
-}
-.footer-brand p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; margin: 16px 0 24px; max-width: 280px; }
-.footer-socials { display: flex; gap: 10px; }
-.social-btn {
-  width: 38px; height: 38px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.6);
+.product-name {
   font-size: 16px;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.social-btn:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3); }
-.social-btn.fb:hover { background: #1877f2; border-color: #1877f2; color: #fff; }
-.social-btn.ig:hover { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); border-color: transparent; color: #fff; }
-.social-btn.wa:hover { background: var(--whatsapp); border-color: var(--whatsapp); color: #fff; }
-.footer-col-title {
-  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 18px;
-}
-.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-links a {
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: #fff; }
-.footer-contact-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
-.footer-contact-item i { color: var(--gold-light); margin-top: 2px; width: 16px; flex-shrink: 0; }
-.footer-contact-item a, .footer-contact-item span {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  text-decoration: none;
-  line-height: 1.5;
-}
-.footer-contact-item a:hover { color: #fff; }
-.footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
-.footer-copy strong { color: rgba(255,255,255,0.6); }
-.footer-made { font-size: 12px; color: rgba(255,255,255,0.3); }
-
-/* Float WA button */
-.float-wa {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 999;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: var(--whatsapp);
+  margin-bottom: 12px;
   color: #fff;
+  line-height: 1.4;
+}
+
+.product-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.spec-tag {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.product-inquire {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  color: white;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.5);
-  animation: pulse-wa 2.5s infinite;
-}
-@keyframes pulse-wa {
-  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
-  50% { box-shadow: 0 4px 36px rgba(37,211,102,0.8), 0 0 0 10px rgba(37,211,102,0.1); }
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-/* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
+.product-inquire:hover {
+  background: var(--whatsapp);
+  border-color: var(--whatsapp);
+}
+
+.product-inquire i {
+  color: var(--whatsapp);
+}
+
+.product-inquire:hover i {
+  color: white;
+}
+
+/* Product Categories */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.category-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.category-card h4 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: 12px;
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.category-list li i {
+  color: var(--gold);
+  font-size: 12px;
+  width: 16px;
+}
+
+/* Footer */
+.footer {
+  background: #0A0F1A;
+  border-top: 1px solid var(--border-gold);
+  padding: 60px 0 30px;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
   .nav-links { display: none; }
-  .hamburger { display: flex; }
-  #home { min-height: auto; padding: 80px 0 60px; }
-  .hero-features { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-image-wrap { max-height: 280px; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .category-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 600px) {
-  .hero-btns { flex-direction: column; }
-  .btn-wa, .btn-call { justify-content: center; }
-  .hero-features { grid-template-columns: 1fr 1fr; }
-  .about-pillars { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
-  .products-grid { grid-template-columns: 1fr 1fr; }
-  .section { padding: 60px 16px; }
-  .promo-bar { font-size: 11px; }
-}
-@media (max-width: 380px) {
-  .products-grid { grid-template-columns: 1fr; }
-  .hero-features { grid-template-columns: 1fr 1fr; }
-}
-
-/* Scroll animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-.reveal.in { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-
-/* Divider */
-.divider { height: 4px; background: linear-gradient(90deg, var(--navy) 0%, var(--gold) 50%, var(--navy) 100%); }
 </style>
-</head>
 <body>
 
-<!-- FLOAT WHATSAPP -->
-<a class="float-wa" href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" target="_blank" title="Chat with us on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- PROMO BAR -->
-<div class="promo-bar">
-  <i class="fas fa-globe"></i>
-  <strong>COTTO Enterprise</strong> — Nigeria's trusted lubricant supplier, serving customers locally and globally &nbsp;|&nbsp;
-  <i class="fas fa-phone"></i> Call: <strong>+234 803 405 3422</strong> &nbsp;|&nbsp;
-  <i class="fab fa-whatsapp"></i> WhatsApp anytime
-</div>
-
-<!-- NAVIGATION -->
-<nav id="mainNav">
-  <div class="nav-inner">
-    <a href="#home" class="logo-wrap">
+<!-- Simple Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <div class="logo">
       <div class="logo-icon">CE</div>
       <div class="logo-text">
-        <span class="logo-name">COTTO Enterprise</span>
-        <span class="logo-tagline">Lubricant Oil Specialists</span>
+        <h2>COTTO ENTERPRISE</h2>
+        <p>Wholesale & Retail</p>
       </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" class="nav-cta" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" onclick="closeMenu()"><i class="fas fa-home fa-fw"></i> Home</a>
-    <a href="#about" onclick="closeMenu()"><i class="fas fa-building fa-fw"></i> About Us</a>
-    <a href="#products" onclick="closeMenu()"><i class="fas fa-oil-can fa-fw"></i> Products</a>
-    <a href="#gallery" onclick="closeMenu()"><i class="fas fa-images fa-fw"></i> Gallery</a>
-    <a href="#contact" onclick="closeMenu()"><i class="fas fa-envelope fa-fw"></i> Contact</a>
-    <a href="tel:+2348034053422" onclick="closeMenu()" style="color:#4fc3f7;"><i class="fas fa-phone fa-fw"></i> Call: +234 803 405 3422</a>
-    <a href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp fa-fw"></i> WhatsApp Us</a>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 </nav>
 
-<!-- ============================= HOME ============================= -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="hero-content">
-    <div class="hero-badge"><i class="fas fa-certificate"></i> Wholesale &amp; Retail Lubricant Supplier</div>
-    <h1 class="hero-title">
-      COTTO Enterprise
-      <span>Quality Lubricant Oils</span>
-    </h1>
-    <p class="hero-sub">Your Trusted Source — From Aba, Nigeria to the World</p>
-    <p class="hero-desc">
-      We are authorized wholesale and retail traders of premium lubricant oils. Stocking our own <strong>COTTO Brand</strong> alongside globally trusted names like <strong>Mobil, Total, Castrol</strong> and more — all genuine, all guaranteed.
-    </p>
-    <div class="hero-btns">
-      <a class="btn-wa" href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" target="_blank">
-        <i class="fab fa-whatsapp fa-lg"></i> WhatsApp Us Now
-      </a>
-      <a class="btn-call" href="tel:+2348034053422">
-        <i class="fas fa-phone fa-lg"></i> Call: +234 803 405 3422
-      </a>
-      <a class="btn-outline-white" href="#products">
-        <i class="fas fa-oil-can"></i> View Products
-      </a>
-    </div>
-
-    <div class="hero-features">
-      <div class="hero-feat-card">
-        <div class="hero-feat-icon">🛢️</div>
-        <div class="hero-feat-name">COTTO Engine Oil 20W-50</div>
-        <div class="hero-feat-size">1L · 4L · 5L · 25L · Drum</div>
-      </div>
-      <div class="hero-feat-card">
-        <div class="hero-feat-icon">⚙️</div>
-        <div class="hero-feat-name">Mobil Delvac</div>
-        <div class="hero-feat-size">1L · 4L · 5L · 25L</div>
-      </div>
-      <div class="hero-feat-card">
-        <div class="hero-feat-icon">🔧</div>
-        <div class="hero-feat-name">Castrol GTX</div>
-        <div class="hero-feat-size">1L · 4L · 5L</div>
-      </div>
-      <div class="hero-feat-card">
-        <div class="hero-feat-icon">🏭</div>
-        <div class="hero-feat-name">COTTO Hydraulic Oil 68</div>
-        <div class="hero-feat-size">1L · 4L · 5L · 25L · Drum</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- BRANDS STRIP -->
-<div class="brands-strip">
-  <div class="brands-inner">
-    <span class="brands-label">Brands We Stock:</span>
-    <span class="brand-pill own">★ COTTO (Our Brand)</span>
-    <span class="brand-pill">Mobil</span>
-    <span class="brand-pill">Total</span>
-    <span class="brand-pill">Castrol</span>
-    <span class="brand-pill">Ammasco</span>
-    <span class="brand-pill">Seahorse</span>
-    <span class="brand-pill">+ More Brands</span>
-  </div>
-</div>
-
-<!-- ============================= ABOUT ============================= -->
-<section id="about" class="section">
+<!-- Hero -->
+<section id="home" class="hero">
   <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Who We Are</div>
-      <h2 class="section-title">A Trusted Name in <span>Lubricant Trade</span></h2>
-      <p class="section-desc">From our base in Aba, Nigeria, COTTO Enterprise has built a strong reputation as a reliable wholesale and retail lubricant oil supplier — with a growing reach across Africa and beyond.</p>
-    </div>
-
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="about-image-wrap">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="COTTO Enterprise warehouse and operations" loading="lazy">
-          <div class="about-badge-float">
-            <div class="num">100%</div>
-            <div class="lbl">Genuine Products</div>
-          </div>
-        </div>
+    <div class="hero-content">
+      <h1>Complete Lubricant <span>Product Range</span></h1>
+      <p>We stock the FULL product lines from Mobil, Total, Castrol, and our own COTTO brand. Everything these companies make — we have or can source.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/2348034053422" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+2348034053422" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="#products" class="btn btn-outline"><i class="fas fa-oil-can"></i> View Full Catalog</a>
       </div>
-      <div class="reveal reveal-delay-2">
-        <div class="about-body">
-          <p>
-            <strong>COTTO Enterprise</strong> is a professional lubricant oil trading company headquartered at 63 Jubilee Road, Aba, Abia State, Nigeria. We specialize in the wholesale and retail supply of high-quality lubricant oils to individuals, workshops, fleet operators, industries, and resellers.
-          </p>
-          <p>
-            We proudly produce and market our own <strong>COTTO brand</strong> — a range of engine oils, hydraulic oils, gear oils, and greases formulated to meet international performance standards. Alongside COTTO, we stock premium products from globally recognized brands including <strong>Mobil, Total, Castrol, Ammasco, Seahorse</strong> and other trusted names.
-          </p>
-          <p>
-            Our mission is simple: provide authentic, high-quality lubricants at competitive prices, backed by knowledgeable service — whether you're buying a single litre or a full drum. We serve customers directly by call and WhatsApp, ensuring fast, personalized service.
-          </p>
+      
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Product Variants</div>
         </div>
-        <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
-            <div>
-              <h4>100% Authentic Products</h4>
-              <p>All products sourced directly from authorized channels — no counterfeits.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon"><i class="fas fa-boxes"></i></div>
-            <div>
-              <h4>Wholesale & Retail</h4>
-              <p>Flexible quantities from single litres to full drums for all customer types.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon"><i class="fas fa-globe-africa"></i></div>
-            <div>
-              <h4>Local Roots, Global Vision</h4>
-              <p>Proudly based in Aba, serving Nigeria and building international trade reach.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon"><i class="fab fa-whatsapp"></i></div>
-            <div>
-              <h4>Easy Ordering</h4>
-              <p>Call or WhatsApp to place orders — quick, simple, no stress.</p>
-            </div>
-          </div>
+        <div class="stat-card">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Major Brands</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1-1000L</div>
+          <div class="stat-label">All Pack Sizes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">WhatsApp Orders</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<!-- PRODUCTS SECTION - COMPLETE RANGES -->
+<section id="products" class="container" style="padding: 60px 0;">
+  <h2 class="section-title">Complete <span>Product Catalog</span></h2>
+  <p class="section-sub">Every product from our brands — if it exists, we can supply it. All viscosities, all pack sizes.</p>
 
-<!-- ============================= PRODUCTS ============================= -->
-<section id="products" class="section">
+  <!-- ===== MOBIL COMPLETE RANGE ===== -->
+  <div class="brand-header">
+    <h3>MOBIL</h3>
+    <span class="badge">Full Range Stockist</span>
+  </div>
+
+  <!-- Mobil 1 Series -->
+  <h4 style="margin: 24px 0 16px; color: var(--gold);">Mobil 1™ Synthetic Engine Oils</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">0W-20</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ ESP Formula</div>
+        <div class="product-specs"><span class="spec-tag">0W-20</span><span class="spec-tag">API SP</span><span class="spec-tag">ILSAC GF-6</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">0W-30</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ Advanced Fuel Economy</div>
+        <div class="product-specs"><span class="spec-tag">0W-30</span><span class="spec-tag">API SN</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">0W-40</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ FS</div>
+        <div class="product-specs"><span class="spec-tag">0W-40</span><span class="spec-tag">ACEA A3/B4</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">5W-20</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ Extended Performance</div>
+        <div class="product-specs"><span class="spec-tag">5W-20</span><span class="spec-tag">API SN Plus</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">5W-30</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ ESP</div>
+        <div class="product-specs"><span class="spec-tag">5W-30</span><span class="spec-tag">C2/C3</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">5W-40</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ FS X2</div>
+        <div class="product-specs"><span class="spec-tag">5W-40</span><span class="spec-tag">ACEA A3/B4</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">10W-40</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ High Mileage</div>
+        <div class="product-specs"><span class="spec-tag">10W-40</span><span class="spec-tag">API SN</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d">
+        <i class="fas fa-flask"></i>
+        <span class="viscosity-badge">10W-60</span>
+        <span class="brand-indicator">Mobil 1</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Mobil 1™ Motorsport</div>
+        <div class="product-specs"><span class="spec-tag">10W-60</span><span class="spec-tag">Racing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobil Super Series -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">Mobil Super™ (Semi-Synthetic & Conventional)</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">10W-40</span><span class="brand-indicator">Super</span></div>
+      <div class="product-info"><div class="product-name">Mobil Super 2000</div><div class="product-specs"><span class="spec-tag">X1 10W-40</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">15W-50</span><span class="brand-indicator">Super</span></div>
+      <div class="product-info"><div class="product-name">Mobil Super 2000</div><div class="product-specs"><span class="spec-tag">15W-50</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">20W-50</span><span class="brand-indicator">Super</span></div>
+      <div class="product-info"><div class="product-name">Mobil Super 1000</div><div class="product-specs"><span class="spec-tag">20W-50</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">15W-40</span><span class="brand-indicator">Super</span></div>
+      <div class="product-info"><div class="product-name">Mobil Super 1000 Diesel</div><div class="product-specs"><span class="spec-tag">15W-40</span></div></div>
+    </div>
+  </div>
+
+  <!-- Mobil Delvac (Diesel) -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">Mobil Delvac™ Heavy Duty Diesel</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">10W-30</span><span class="brand-indicator">Delvac</span></div>
+      <div class="product-info"><div class="product-name">Mobil Delvac MX</div><div class="product-specs"><span class="spec-tag">10W-30</span><span class="spec-tag">API CK-4</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">15W-40</span><span class="brand-indicator">Delvac</span></div>
+      <div class="product-info"><div class="product-name">Mobil Delvac MX</div><div class="product-specs"><span class="spec-tag">15W-40</span><span class="spec-tag">API CJ-4</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">20W-50</span><span class="brand-indicator">Delvac</span></div>
+      <div class="product-info"><div class="product-name">Mobil Delvac 1300 Super</div><div class="product-specs"><span class="spec-tag">20W-50</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">5W-40</span><span class="brand-indicator">Delvac</span></div>
+      <div class="product-info"><div class="product-name">Mobil Delvac 1</div><div class="product-specs"><span class="spec-tag">5W-40</span><span class="spec-tag">Full Synthetic</span></div></div>
+    </div>
+  </div>
+
+  <!-- Mobil Industrial -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">Mobil Industrial Lubricants</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 32</span><span class="brand-indicator">DTE</span></div>
+      <div class="product-info"><div class="product-name">Mobil DTE 24</div><div class="product-specs"><span class="spec-tag">Hydraulic Oil</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 46</span><span class="brand-indicator">DTE</span></div>
+      <div class="product-info"><div class="product-name">Mobil DTE 25</div><div class="product-specs"><span class="spec-tag">Hydraulic Oil</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 68</span><span class="brand-indicator">DTE</span></div>
+      <div class="product-info"><div class="product-name">Mobil DTE 26</div><div class="product-specs"><span class="spec-tag">Hydraulic Oil</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cog"></i><span class="viscosity-badge">150</span><span class="brand-indicator">Gear</span></div>
+      <div class="product-info"><div class="product-name">Mobilgear 600 XP 150</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cog"></i><span class="viscosity-badge">220</span><span class="brand-indicator">Gear</span></div>
+      <div class="product-info"><div class="product-name">Mobilgear 600 XP 220</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cog"></i><span class="viscosity-badge">320</span><span class="brand-indicator">Gear</span></div>
+      <div class="product-info"><div class="product-name">Mobilgear 600 XP 320</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-grease"></i><span class="viscosity-badge">EP2</span><span class="brand-indicator">Grease</span></div>
+      <div class="product-info"><div class="product-name">Mobilgrease XHP 222</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-grease"></i><span class="viscosity-badge">EP1</span><span class="brand-indicator">Grease</span></div>
+      <div class="product-info"><div class="product-name">Mobilgrease XHP 221</div></div>
+    </div>
+  </div>
+
+  <!-- ===== TOTAL COMPLETE RANGE ===== -->
+  <div class="brand-header" style="margin-top: 60px;">
+    <h3>TOTALEnergies QUARTZ</h3>
+    <span class="badge">Full Range</span>
+  </div>
+
+  <!-- QUARTZ 9000 Series -->
+  <h4 style="margin: 24px 0 16px; color: var(--gold);">QUARTZ 9000 (Full Synthetic)</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">0W-20</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Future</div><div class="product-specs"><span class="spec-tag">0W-20</span><span class="spec-tag">GF-6</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">0W-30</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Energy</div><div class="product-specs"><span class="spec-tag">0W-30</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">5W-30</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Energy</div><div class="product-specs"><span class="spec-tag">5W-30</span><span class="spec-tag">C1/C2</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">5W-40</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Power</div><div class="product-specs"><span class="spec-tag">5W-40</span><span class="spec-tag">A3/B4</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">10W-50</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Power</div><div class="product-specs"><span class="spec-tag">10W-50</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-flask"></i><span class="viscosity-badge">5W-20</span><span class="brand-indicator">QUARTZ</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 9000 Future</div><div class="product-specs"><span class="spec-tag">5W-20</span></div></div>
+    </div>
+  </div>
+
+  <!-- QUARTZ 7000/5000 -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">QUARTZ 7000 & 5000 (Semi-Synthetic)</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">10W-40</span><span class="brand-indicator">7000</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 7000</div><div class="product-specs"><span class="spec-tag">10W-40</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">15W-40</span><span class="brand-indicator">7000</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 7000 Diesel</div><div class="product-specs"><span class="spec-tag">15W-40</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">20W-50</span><span class="brand-indicator">5000</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 5000</div><div class="product-specs"><span class="spec-tag">20W-50</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-oil-can"></i><span class="viscosity-badge">15W-40</span><span class="brand-indicator">5000</span></div>
+      <div class="product-info"><div class="product-name">QUARTZ 5000 Diesel</div><div class="product-specs"><span class="spec-tag">15W-40</span></div></div>
+    </div>
+  </div>
+
+  <!-- Total Rubia (Diesel) -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">Total Rubia (Heavy Duty Diesel)</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">10W-40</span><span class="brand-indicator">Rubia</span></div>
+      <div class="product-info"><div class="product-name">Rubia Optima</div><div class="product-specs"><span class="spec-tag">10W-40</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">15W-40</span><span class="brand-indicator">Rubia</span></div>
+      <div class="product-info"><div class="product-name">Rubia Optima</div><div class="product-specs"><span class="spec-tag">15W-40</span><span class="spec-tag">CI-4</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-truck"></i><span class="viscosity-badge">20W-50</span><span class="brand-indicator">Rubia</span></div>
+      <div class="product-info"><div class="product-name">Rubia Works</div><div class="product-specs"><span class="spec-tag">20W-50</span></div></div>
+    </div>
+  </div>
+
+  <!-- Total Industrial -->
+  <h4 style="margin: 32px 0 16px; color: var(--gold);">Total Industrial Lubricants</h4>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 32</span><span class="brand-indicator">Azolla</span></div>
+      <div class="product-info"><div class="product-name">Azolla ZS 32</div><div class="product-specs"><span class="spec-tag">Hydraulic Oil</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 46</span><span class="brand-indicator">Azolla</span></div>
+      <div class="product-info"><div class="product-name">Azolla ZS 46</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-industry"></i><span class="viscosity-badge">ISO 68</span><span class="brand-indicator">Azolla</span></div>
+      <div class="product-info"><div class="product-name">Azolla ZS 68</div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cog"></i><span class="viscosity-badge">220</span><span class="brand-indicator">Carter</span></div>
+      <div class="product-info"><div class="product-name">Carter EP 220</div></div>
+    </div>
+  </div>
+
+  <!-- ===== COTTO (Our Brand) ===== -->
+  <div class="brand-header" style="margin-top: 60px;">
+    <h3>COTTO</h3>
+    <span class="badge">Our Own Brand</span>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-star"></i><span class="viscosity-badge">20W-50</span><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO Engine Oil</div><div class="product-specs"><span class="spec-tag">20W-50</span><span class="spec-tag">Petrol/Diesel</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cog"></i><span class="viscosity-badge">Dex III</span><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO ATF</div><div class="product-specs"><span class="spec-tag">Dexron II/III</span><span class="spec-tag">1L,4L</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-tint"></i><span class="viscosity-badge">ISO 68</span><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO Hydraulic Oil</div><div class="product-specs"><span class="spec-tag">68</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-cogs"></i><span class="viscosity-badge">90</span><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO Gear Oil</div><div class="product-specs"><span class="spec-tag">EP 90</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-fill-drip"></i><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO Gasket Gum</div><div class="product-specs"><span class="spec-tag">100g,200g</span></div></div>
+    </div>
+    <div class="product-card">
+      <div class="product-2d"><i class="fas fa-filter"></i><span class="brand-indicator">COTTO</span></div>
+      <div class="product-info"><div class="product-name">COTTO Oil Filters</div><div class="product-specs"><span class="spec-tag">All sizes</span></div></div>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <div style="background: rgba(212,175,55,0.05); border: 1px solid var(--border-gold); border-radius: 16px; padding: 24px; margin: 40px 0; text-align: center;">
+    <i class="fas fa-info-circle" style="color: var(--gold); font-size: 24px; margin-bottom: 12px;"></i>
+    <p style="color: var(--text-muted);"><strong style="color: #fff;">Not seeing a specific viscosity or product?</strong> We stock the complete ranges from all brands. Contact us via WhatsApp or call — if it exists, we can supply it.</p>
+  </div>
+</section>
+
+<!-- Simple Contact Section -->
+<section id="contact" style="background: #0F1A2A; padding: 60px 0;">
   <div class="container">
-    <div class="products-intro reveal">
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <p class="section-sub">Call or WhatsApp for pricing, availability, or to place orders.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
       <div>
-        <div class="section-tag">Our Catalog</div>
-        <h2 class="section-title">Our <span>Products</span></h2>
-        <p class="section-desc">Browse our full range. No prices listed — call or WhatsApp for current pricing and bulk deals.</p>
+        <div style="background: var(--card-bg); border: 1px solid var(--border-gold); border-radius: 16px; padding: 32px;">
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+            <i class="fas fa-phone-alt" style="font-size: 28px; color: var(--gold);"></i>
+            <div>
+              <div style="color: var(--text-muted); font-size: 12px;">Call Us</div>
+              <a href="tel:+2348034053422" style="color: #fff; text-decoration: none; font-size: 20px; font-weight: 600;">+234 803 405 3422</a>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <i class="fab fa-whatsapp" style="font-size: 28px; color: var(--gold);"></i>
+            <div>
+              <div style="color: var(--text-muted); font-size: 12px;">WhatsApp</div>
+              <a href="https://wa.me/2348034053422" style="color: #fff; text-decoration: none; font-size: 20px; font-weight: 600;">+234 803 405 3422</a>
+            </div>
+          </div>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-gold);">
+            <div style="color: var(--text-muted);">63 Jubilee Road, Aba, Abia State</div>
+            <div style="color: var(--text-muted); margin-top: 8px;">Mon-Sat: 8am-6pm | Sunday: Closed</div>
+          </div>
+        </div>
       </div>
-      <a href="https://wa.me/2348034053422?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20product%20prices%20and%20availability" class="contact-pill" target="_blank">
-        <i class="fab fa-whatsapp"></i> Get Pricing via WhatsApp
-      </a>
-    </div>
-
-    <!-- COTTO BRAND -->
-    <div class="cat-block reveal">
-      <div class="cat-header cat-own">
-        <div class="cat-logo-wrap" style="background:var(--navy);">
-          <span class="cat-logo-text" style="color:var(--gold-light);font-size:22px;letter-spacing:2px;">COTTO</span>
-        </div>
-        <div>
-          <div class="cat-logo-text">COTTO — Our Own Brand</div>
-          <div class="cat-label">Produced &amp; marketed by COTTO Enterprise</div>
-        </div>
-        <span class="own-badge">★ Our Brand</span>
-      </div>
-      <div class="products-grid">
-
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80" alt="COTTO Engine Oil 20W-50" loading="lazy">
-            <span class="product-brand-badge own">COTTO</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">COTTO Engine Oil 20W-50</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-              <span class="size-tag">Drum</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20COTTO%20Engine%20Oil%2020W-50" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-img-wrap" style="background:#e8f4f8;">
-            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=400&q=80" alt="COTTO Hydraulic Oil 68" loading="lazy">
-            <span class="product-brand-badge own">COTTO</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">COTTO Hydraulic Oil 68</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-              <span class="size-tag">Drum</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20COTTO%20Hydraulic%20Oil%2068" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-3">
-          <div class="product-img-wrap" style="background:#f5f0e8;">
-            <img src="https://images.unsplash.com/photo-1609159202624-c37e1f7fb6e8?w=400&q=80" alt="COTTO Gear Oil 90" loading="lazy">
-            <span class="product-brand-badge own">COTTO</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">COTTO Gear Oil 90</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20COTTO%20Gear%20Oil%2090" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-4">
-          <div class="product-img-wrap" style="background:#f0ede8;">
-            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80" alt="COTTO Grease" loading="lazy">
-            <span class="product-brand-badge own">COTTO</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">COTTO Grease</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 kg</span>
-              <span class="size-tag">5 kg</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20COTTO%20Grease" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
+      
+      <!-- Simple Form -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-gold); border-radius: 16px; padding: 32px;">
+        <h3 style="margin-bottom: 24px;">Quick Inquiry</h3>
+        <input type="text" placeholder="Your Name" style="width: 100%; padding: 12px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-gold); border-radius: 8px; color: #fff;">
+        <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 12px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-gold); border-radius: 8px; color: #fff;">
+        <textarea placeholder="What products do you need?" rows="4" style="width: 100%; padding: 12px; margin-bottom: 16px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-gold); border-radius: 8px; color: #fff;"></textarea>
+        <button style="width: 100%; padding: 14px; background: var(--gold); border: none; border-radius: 8px; font-weight: 700; color: #000;">Send Message</button>
       </div>
     </div>
-
-    <!-- MOBIL -->
-    <div class="cat-block reveal">
-      <div class="cat-header">
-        <div class="cat-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/ExxonMobil_Logo.svg/400px-ExxonMobil_Logo.svg.png" alt="Mobil" loading="lazy">
-        </div>
-        <div>
-          <div class="cat-logo-text">Mobil</div>
-          <div class="cat-label">ExxonMobil — World's leading lubricant brand</div>
-        </div>
-      </div>
-      <div class="products-grid">
-
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-img-wrap" style="background:#fff5f5;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Mobil_Super_2000_10W-40.jpg/320px-Mobil_Super_2000_10W-40.jpg" alt="Mobil Super 2000" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=300&q=80'">
-            <span class="product-brand-badge">Mobil</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Mobil Super 2000</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Mobil%20Super%202000" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-img-wrap" style="background:#fff3f0;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Mobil_Delvac_MX_Extra_10W-40.jpg/320px-Mobil_Delvac_MX_Extra_10W-40.jpg" alt="Mobil Delvac" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&q=80'">
-            <span class="product-brand-badge">Mobil</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Mobil Delvac</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Mobil%20Delvac" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-3">
-          <div class="product-img-wrap" style="background:#f0f5ff;">
-            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=300&q=80" alt="Mobil Hydraulic Oil" loading="lazy">
-            <span class="product-brand-badge">Mobil</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Mobil Hydraulic Oil</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-              <span class="size-tag">Drum</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Mobil%20Hydraulic%20Oil" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- TOTAL -->
-    <div class="cat-block reveal">
-      <div class="cat-header">
-        <div class="cat-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/TotalEnergies.svg/400px-TotalEnergies.svg.png" alt="Total" loading="lazy" style="max-height:28px;">
-        </div>
-        <div>
-          <div class="cat-logo-text">TotalEnergies</div>
-          <div class="cat-label">Global energy leader — premium lubricant solutions</div>
-        </div>
-      </div>
-      <div class="products-grid">
-
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-img-wrap" style="background:#fff7f0;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Total_Quartz_9000_5W-40.jpg/320px-Total_Quartz_9000_5W-40.jpg" alt="Total Quartz 5000" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=300&q=80'">
-            <span class="product-brand-badge" style="background:#f4a900;color:#fff;">Total</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Total Quartz 5000</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Total%20Quartz%205000" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-img-wrap" style="background:#f5fbf0;">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=300&q=80" alt="Total Rubia" loading="lazy">
-            <span class="product-brand-badge" style="background:#f4a900;color:#fff;">Total</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Total Rubia</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Total%20Rubia" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-3">
-          <div class="product-img-wrap" style="background:#f0f5ff;">
-            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=300&q=80" alt="Total Azolla" loading="lazy">
-            <span class="product-brand-badge" style="background:#f4a900;color:#fff;">Total</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Total Azolla (Hydraulic)</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Total%20Azolla" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CASTROL -->
-    <div class="cat-block reveal">
-      <div class="cat-header">
-        <div class="cat-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Castrol_logo.svg/400px-Castrol_logo.svg.png" alt="Castrol" loading="lazy">
-        </div>
-        <div>
-          <div class="cat-logo-text">Castrol</div>
-          <div class="cat-label">British Petroleum lubricant brand — trusted worldwide</div>
-        </div>
-      </div>
-      <div class="products-grid">
-
-        <div class="product-card reveal reveal-delay-1">
-          <div class="product-img-wrap" style="background:#f0f8f0;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Castrol_GTX_10W-40.jpg/320px-Castrol_GTX_10W-40.jpg" alt="Castrol GTX" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1609159202624-c37e1f7fb6e8?w=300&q=80'">
-            <span class="product-brand-badge" style="background:#009b3a;">Castrol</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Castrol GTX</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Castrol%20GTX" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card reveal reveal-delay-2">
-          <div class="product-img-wrap" style="background:#f2faf2;">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=300&q=80" alt="Castrol CRB" loading="lazy">
-            <span class="product-brand-badge" style="background:#009b3a;">Castrol</span>
-          </div>
-          <div class="product-info">
-            <div class="product-name">Castrol CRB</div>
-            <div class="product-sizes">
-              <span class="size-tag">1 Litre</span>
-              <span class="size-tag">4 Litres</span>
-              <span class="size-tag">5 Litres</span>
-              <span class="size-tag">25 Litres</span>
-            </div>
-            <a class="product-inquire" href="https://wa.me/2348034053422?text=Hello%2C%20I%20want%20to%20order%20Castrol%20CRB" target="_blank">
-              <i class="fab fa-whatsapp"></i> Inquire / Order
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- OTHER BRANDS -->
-    <div class="cat-block reveal">
-      <div class="cat-header">
-        <div class="cat-logo-wrap" style="background:var(--grey-bg);">
-          <i class="fas fa-boxes" style="font-size:22px;color:var(--navy);"></i>
-        </div>
-        <div>
-          <div class="cat-logo-text">Other Brands</div>
-          <div class="cat-label">Additional quality brands we stock</div>
-        </div>
-      </div>
-      <div class="products-grid">
-        <div class="other-brands-card">
-          <div class="other-brands-title"><i class="fas fa-check-circle" style="color:var(--gold);"></i> &nbsp;We also stock these trusted brands — contact us for availability:</div>
-          <div class="other-brand-pills">
-            <div class="ob-pill"><i class="fas fa-oil-can" style="color:var(--navy-light);font-size:13px;"></i> Ammasco</div>
-            <div class="ob-pill"><i class="fas fa-oil-can" style="color:var(--navy-light);font-size:13px;"></i> Seahorse</div>
-            <div class="ob-pill"><i class="fas fa-oil-can" style="color:var(--navy-light);font-size:13px;"></i> Local Brands</div>
-            <div class="ob-pill"><i class="fab fa-whatsapp" style="color:var(--whatsapp);font-size:13px;"></i>
-              <a href="https://wa.me/2348034053422?text=Hello%2C%20I'm%20looking%20for%20a%20specific%20lubricant%20brand" target="_blank" style="color:var(--navy);text-decoration:none;">Ask for other brands →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- ============================= GALLERY ============================= -->
-<section id="gallery" class="section">
+<!-- Footer -->
+<footer class="footer">
   <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Gallery</div>
-      <h2 class="section-title">Our <span>Products &amp; Store</span></h2>
-      <p class="section-desc">A glimpse into COTTO Enterprise — our products, storage, and operations.</p>
-    </div>
-    <div class="gallery-grid" style="margin-top:40px;">
-
-      <div class="gallery-item reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75" alt="Lubricant warehouse" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Our Warehouse</span></div>
+    <div class="footer-grid">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 40px; background: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800;">CE</div>
+          <span style="font-weight: 700;">COTTO ENTERPRISE</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px;">Complete lubricant supplier — wholesale & retail.</p>
       </div>
-      <div class="gallery-item reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=75" alt="Engine oil products" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Engine Oils</span></div>
+      <div class="footer-links">
+        <h4 style="color: var(--gold); margin-bottom: 16px;">Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="gallery-item reveal reveal-delay-3">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="Industrial lubricants" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Industrial Products</span></div>
+      <div class="footer-links">
+        <h4 style="color: var(--gold); margin-bottom: 16px;">Brands</h4>
+        <a href="#">COTTO</a>
+        <a href="#">Mobil</a>
+        <a href="#">Total</a>
+        <a href="#">Castrol</a>
       </div>
-      <div class="gallery-item reveal">
-        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=600&q=75" alt="Hydraulic oil drums" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Hydraulic &amp; Gear Oils</span></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1609159202624-c37e1f7fb6e8?w=600&q=75" alt="Product display" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Product Display</span></div>
-      </div>
-      <div class="gallery-item reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=75" alt="Operations and delivery" loading="lazy">
-        <div class="gallery-item-overlay"><span class="gallery-item-label">Delivery &amp; Logistics</span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ============================= CONTACT ============================= -->
-<section id="contact" class="section section-alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Get In Touch</div>
-      <h2 class="section-title">Contact & <span>Order</span></h2>
-      <p class="section-desc">Call or WhatsApp to place orders or ask about availability. We respond fast.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-info-wrap reveal">
-
-        <!-- WhatsApp -->
-        <div class="contact-card">
-          <div class="contact-icon ci-wa"><i class="fab fa-whatsapp"></i></div>
-          <div>
-            <div class="contact-detail-label">WhatsApp (Preferred)</div>
-            <a href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" class="contact-detail-val" target="_blank">+234 803 405 3422</a>
-            <a href="https://wa.me/2349033586652?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" class="contact-detail-val" target="_blank">+234 903 358 6652</a>
-            <div class="contact-detail-sub">Tap to open WhatsApp chat with pre-filled message</div>
-          </div>
-        </div>
-
-        <!-- Phone -->
-        <div class="contact-card">
-          <div class="contact-icon ci-call"><i class="fas fa-phone"></i></div>
-          <div>
-            <div class="contact-detail-label">Phone (Call Direct)</div>
-            <a href="tel:+2348034053422" class="contact-detail-val">+234 803 405 3422</a>
-            <a href="tel:+2349033586652" class="contact-detail-val">+234 903 358 6652</a>
-            <div class="contact-detail-sub">Tap to call on mobile</div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="contact-card">
-          <div class="contact-icon ci-email"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div class="contact-detail-label">Email</div>
-            <a href="mailto:info@cottoenterprise.com" class="contact-detail-val">info@cottoenterprise.com</a>
-            <div class="contact-detail-sub">We reply within 24 hours</div>
-          </div>
-        </div>
-
-        <!-- Address -->
-        <div class="contact-card">
-          <div class="contact-icon ci-loc"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <div class="contact-detail-label">Physical Address</div>
-            <a href="https://www.google.com/maps/search/63+Jubilee+Road,+Aba,+Abia+State,+Nigeria" class="contact-detail-val" target="_blank">63 Jubilee Road</a>
-            <div class="contact-detail-sub">Aba, Abia State, Nigeria</div>
-          </div>
-        </div>
-
-        <!-- Hours -->
-        <div class="contact-card">
-          <div class="contact-icon ci-hours"><i class="fas fa-clock"></i></div>
-          <div>
-            <div class="contact-detail-label">Business Hours</div>
-            <table class="hours-table">
-              <tr><td>Monday – Friday</td><td>8:00 AM – 6:00 PM</td></tr>
-              <tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
-              <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
-            </table>
-          </div>
-        </div>
-
-        <!-- Big CTA buttons -->
-        <div class="cta-card-big">
-          <p><strong style="color:#fff;">Ready to order? Contact us directly:</strong></p>
-          <a class="cta-btn-full wa" href="https://wa.me/2348034053422?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" target="_blank">
-            <i class="fab fa-whatsapp fa-lg"></i> WhatsApp: +234 803 405 3422
-          </a>
-          <a class="cta-btn-full wa" href="https://wa.me/2349033586652?text=Hello%2C%20I%27m%20interested%20in%20your%20lubricant%20products" target="_blank">
-            <i class="fab fa-whatsapp fa-lg"></i> WhatsApp: +234 903 358 6652
-          </a>
-          <a class="cta-btn-full call" href="tel:+2348034053422">
-            <i class="fas fa-phone fa-lg"></i> Call: +234 803 405 3422
-          </a>
-        </div>
-
-        <!-- Map -->
-        <div class="map-placeholder">
-          <iframe
-            src="https://maps.google.com/maps?q=63+Jubilee+Road,+Aba,+Abia+State,+Nigeria&output=embed"
-            title="COTTO Enterprise Location"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-      </div>
-
-      <!-- Contact Form -->
-      <div class="reveal reveal-delay-2">
-        <div class="contact-form-wrap">
-          <div class="form-title"><i class="fas fa-paper-plane" style="color:var(--gold);font-size:22px;margin-right:10px;"></i>Send Us a Message</div>
-          <form id="contactForm" onsubmit="submitForm(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-input" placeholder="Your name" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input type="tel" class="form-input" placeholder="+234 000 000 0000" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-input" placeholder="your@email.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Product(s) of Interest</label>
-              <select class="form-select">
-                <option value="" disabled selected>Select a product</option>
-                <option>COTTO Engine Oil 20W-50</option>
-                <option>COTTO Hydraulic Oil 68</option>
-                <option>COTTO Gear Oil 90</option>
-                <option>COTTO Grease</option>
-                <option>Mobil Super 2000</option>
-                <option>Mobil Delvac</option>
-                <option>Mobil Hydraulic Oil</option>
-                <option>Total Quartz 5000</option>
-                <option>Total Rubia</option>
-                <option>Total Azolla</option>
-                <option>Castrol GTX</option>
-                <option>Castrol CRB</option>
-                <option>Ammasco / Seahorse / Other</option>
-                <option>Multiple Products</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Your Message *</label>
-              <textarea class="form-textarea" placeholder="Tell us what you need — quantities, pack sizes, delivery info, or any questions..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit">
-              <i class="fas fa-paper-plane"></i> &nbsp; Send Message
-            </button>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <i class="fas fa-check-circle fa-2x" style="color:var(--whatsapp);margin-bottom:8px;display:block;"></i>
-            <strong>Message Sent!</strong><br>
-            Thank you — we'll respond within 24 hours.<br>
-            <span style="font-size:13px;color:#555;">Or WhatsApp us now for faster response:</span><br>
-            <a href="https://wa.me/2348034053422" target="_blank" style="color:var(--whatsapp);font-weight:700;">+234 803 405 3422</a>
-          </div>
-        </div>
+      <div>
+        <h4 style="color: var(--gold); margin-bottom: 16px;">Contact</h4>
+        <p style="color: var(--text-muted);"><i class="fas fa-phone" style="width: 20px;"></i> +234 803 405 3422</p>
+        <p style="color: var(--text-muted);"><i class="fab fa-whatsapp" style="width: 20px;"></i> +234 803 405 3422</p>
+        <p style="color: var(--text-muted);"><i class="fas fa-map-marker-alt" style="width: 20px;"></i> 63 Jubilee Road, Aba</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============================= FOOTER ============================= -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
-        <div style="width:40px;height:40px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:#fff;letter-spacing:1px;">CE</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:#fff;letter-spacing:2px;">COTTO ENTERPRISE</div>
-      </div>
-      <p>Your trusted wholesale and retail lubricant oil supplier. Proudly based in Aba, Nigeria — serving customers locally and globally with genuine, quality products.</p>
-      <div class="footer-socials">
-        <a href="#" class="social-btn fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-btn ig" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/2348034053422" class="social-btn wa" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
+    <div style="text-align: center; color: var(--text-muted); font-size: 12px; padding-top: 40px;">
+      © 2025 COTTO Enterprise. All rights reserved.
     </div>
-
-    <div>
-      <div class="footer-col-title">Quick Links</div>
-      <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Our Brands</div>
-      <ul class="footer-links">
-        <li><a href="#products">★ COTTO (Our Brand)</a></li>
-        <li><a href="#products">Mobil</a></li>
-        <li><a href="#products">Total</a></li>
-        <li><a href="#products">Castrol</a></li>
-        <li><a href="#products">Ammasco &amp; Seahorse</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Contact Us</div>
-      <div class="footer-contact-item">
-        <i class="fab fa-whatsapp"></i>
-        <div>
-          <a href="https://wa.me/2348034053422" target="_blank">+234 803 405 3422</a><br>
-          <a href="https://wa.me/2349033586652" target="_blank">+234 903 358 6652</a>
-        </div>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:info@cottoenterprise.com">info@cottoenterprise.com</a>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>63 Jubilee Road, Aba,<br>Abia State, Nigeria</span>
-      </div>
-      <div class="footer-contact-item">
-        <i class="fas fa-clock"></i>
-        <span>Mon–Sat: 8AM – 6PM<br>Sunday: Closed</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-copy">
-      &copy; 2025 <strong>COTTO Enterprise</strong>. All rights reserved. Aba, Abia State, Nigeria.
-    </div>
-    <div class="footer-made">Lubricant Oil Specialists — Wholesale &amp; Retail</div>
   </div>
 </footer>
-
-<!-- ============================= SCRIPTS ============================= -->
-<script>
-// Mobile nav
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-function closeMenu() {
-  document.getElementById('mobileMenu').classList.remove('open');
-}
-
-// Scroll reveal
-const revealEls = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
-revealEls.forEach(el => revealObserver.observe(el));
-
-// Active nav
-const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-const sections = document.querySelectorAll('section[id]');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-  });
-}, { passive: true });
-
-// Contact form
-function submitForm(e) {
-  e.preventDefault();
-  document.getElementById('contactForm').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-}
-</script>
 </body>
 </html>
