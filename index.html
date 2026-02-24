@@ -1,756 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>COTTO ENTERPRISE | Lubricant Oil Trading Aba Nigeria</title>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
-    /* RESET & BASE */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #ffffff;
-    }
-    h1, h2, h3, h4 {
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    ul {
-      list-style: none;
-    }
-    .container {
-      width: 90%;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    section {
-      padding: 5rem 0;
-    }
-    .section-title {
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      text-align: center;
-      color: #1e3a5f;
-      position: relative;
-    }
-    .section-title:after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #1e3a5f;
-      margin: 0.75rem auto 0;
-      border-radius: 2px;
-    }
-    /* buttons */
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .btn-wa {
-      background-color: #25D366;
-      color: white;
-    }
-    .btn-wa i {
-      margin-right: 8px;
-    }
-    .btn-wa:hover {
-      background-color: #20b859;
-      transform: translateY(-2px);
-    }
-    .btn-call {
-      background-color: #0077b6;
-      color: white;
-    }
-    .btn-call i {
-      margin-right: 8px;
-    }
-    .btn-call:hover {
-      background-color: #005f8c;
-      transform: translateY(-2px);
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      background-color: #1e3a5f;
-      color: white;
-      padding: 0.8rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .header-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    .logo span {
-      font-weight: 300;
-      font-size: 1rem;
-      display: block;
-      line-height: 1.2;
-    }
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    .nav-menu a {
-      font-weight: 500;
-      transition: opacity 0.2s;
-      position: relative;
-      padding-bottom: 5px;
-    }
-    .nav-menu a:hover, .nav-menu a.active {
-      opacity: 0.9;
-    }
-    .nav-menu a.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: white;
-    }
-    .hamburger {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-      .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 75px;
-        flex-direction: column;
-        background-color: #1e3a5f;
-        width: 100%;
-        text-align: center;
-        padding: 2rem 0;
-        gap: 1.5rem;
-        transition: left 0.3s ease;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-      }
-      .nav-menu.active {
-        left: 0;
-      }
-    }
-
-    /* ===== HERO ===== */
-    #home {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('https://images.unsplash.com/photo-1586521995568-39abaa0c231b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover fixed;
-      color: white;
-      padding: 7rem 0;
-    }
-    .hero-content {
-      max-width: 700px;
-    }
-    .hero-content h1 {
-      font-size: 3.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero-content .subhead {
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      margin: 2.5rem 0 3rem;
-    }
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .featured-card {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(4px);
-      border-radius: 12px;
-      padding: 1.2rem;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-    .featured-card i {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #FFD966;
-    }
-    @media (max-width: 768px) {
-      .featured-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-content h1 { font-size: 2.5rem; }
-    }
-
-    /* ===== ABOUT ===== */
-    #about {
-      background-color: #f5f5f5;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .about-text p {
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-    }
-    .about-highlights {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    .highlight-card {
-      background: white;
-      padding: 1.8rem 1rem;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-    }
-    .highlight-card i {
-      font-size: 2.2rem;
-      color: #1e3a5f;
-    }
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ===== PRODUCTS with images ===== */
-    #products {
-      background: white;
-    }
-    .category-block {
-      margin-bottom: 3rem;
-    }
-    .category-title {
-      font-size: 1.8rem;
-      color: #1e3a5f;
-      border-left: 6px solid #1e3a5f;
-      padding-left: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.8rem;
-    }
-    .product-card {
-      background: #f9f9f9;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: all 0.2s;
-      border: 1px solid #eee;
-      display: flex;
-      flex-direction: column;
-    }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(30,58,95,0.1);
-    }
-    .product-img {
-      width: 100%;
-      height: 160px;
-      object-fit: contain;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      background: white;
-      padding: 0.5rem;
-    }
-    .product-name {
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-    }
-    .product-desc {
-      font-size: 0.9rem;
-      color: #4a5568;
-      margin-bottom: 0.5rem;
-    }
-    .product-sizes {
-      font-size: 0.85rem;
-      background: #eef2f6;
-      padding: 0.4rem 0.8rem;
-      border-radius: 40px;
-      display: inline-block;
-      margin-top: 0.5rem;
-      align-self: flex-start;
-    }
-    .other-brands-placeholder {
-      background: #f0f4fa;
-      padding: 2.5rem;
-      border-radius: 24px;
-      text-align: center;
-      font-style: italic;
-      color: #2c3e50;
-    }
-
-    /* ===== GALLERY ===== */
-    #gallery {
-      background-color: #f5f5f5;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-    .gallery-item {
-      background: #ddd;
-      border-radius: 20px;
-      aspect-ratio: 1/1;
-      background: linear-gradient(145deg, #e0e0e0, #f0f0f0);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #1e3a5f;
-      font-weight: 500;
-    }
-    .gallery-item i {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      opacity: 0.4;
-    }
-    @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    /* ===== CONTACT ===== */
-    #contact {
-      background: white;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-    .contact-info-box {
-      background: #f8fafd;
-      padding: 2rem;
-      border-radius: 24px;
-    }
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-    .info-item i {
-      width: 40px;
-      height: 40px;
-      background: #1e3a5f;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-    .hours {
-      margin: 2rem 0;
-      padding: 1rem 0;
-      border-top: 1px dashed #ccc;
-      border-bottom: 1px dashed #ccc;
-    }
-    .map-placeholder {
-      background: #d1ddeb;
-      height: 200px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1e3a5f;
-      font-weight: 600;
-      margin-top: 1.5rem;
-    }
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 1px solid #ccc;
-      border-radius: 40px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    textarea {
-      border-radius: 24px;
-    }
-    .submit-btn {
-      background-color: #1e3a5f;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 40px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.2s;
-      width: 100%;
-    }
-    .submit-btn:hover {
-      background-color: #0f2a44;
-    }
-    #form-message {
-      margin-top: 1rem;
-      color: green;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background-color: #1e3a5f;
-      color: white;
-      padding: 2.5rem 0 1rem;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      background: rgba(255,255,255,0.1);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.2s;
-    }
-    .social-icons a:hover {
-      background: white;
-      color: #1e3a5f;
-    }
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container header-wrapper">
-      <div class="logo">
-        COTTO ENTERPRISE
-        <span>Aba, Nigeria</span>
+<!-- COTTO category with your actual product description -->
+<div class="category-block">
+  <h3 class="category-title"><i class="fas fa-star"></i> COTTO (Our Brand)</h3>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #1e3a5f, #0f2a44); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-oil-can" style="font-size: 3rem; margin-bottom: 0.5rem;"></i>
+          <div>COTTO</div>
+        </div>
       </div>
-      <nav>
-        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#products" class="nav-link">Products</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="product-name">COTTO Engine Oil 20W-50</div>
+      <span class="product-sizes">1L, 4L, 5L, 25L, Drum</span>
     </div>
-  </header>
-
-  <main>
-    <!-- HOME SECTION -->
-    <section id="home">
-      <div class="container">
-        <div class="hero-content">
-          <h1>COTTO ENTERPRISE – Quality Lubricant Oils</h1>
-          <div class="subhead">Wholesale & Retail Suppliers in Aba</div>
-          <p>Trusted traders offering our own <strong>COTTO brand</strong> (including ATF, Gasket Gum & Filters) alongside <strong>Mobil, Total, Castrol, Ammasco, Seahorse</strong> and local brands. Call or WhatsApp to order.</p>
-          <div class="hero-buttons">
-            <a href="tel:+2348034053422" class="btn btn-call"><i class="fas fa-phone-alt"></i> CALL +234 803 405 3422</a>
-            <a href="https://wa.me/2349033586652?text=Hello%2C%20I'm%20interested%20in%20your%20lubricant%20products" target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WHATSAPP +234 903 358 6652</a>
-          </div>
-        </div>
-        <div class="featured-grid">
-          <div class="featured-card"><i class="fas fa-oil-can"></i><h4>COTTO Engine Oil</h4><p>20W-50 · 1L, 4L, 5L</p></div>
-          <div class="featured-card"><i class="fas fa-cog"></i><h4>COTTO ATF</h4><p>Dexron II & III · 1L, 4L</p></div>
-          <div class="featured-card"><i class="fas fa-tint"></i><h4>Mobil Super 2000</h4><p>1L, 4L, 5L</p></div>
-          <div class="featured-card"><i class="fas fa-filter"></i><h4>Oil Filters</h4><p>All popular sizes</p></div>
+    
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #b8860b, #8b6911); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-cog" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">ATF DEXRON III</div>
         </div>
       </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About COTTO ENTERPRISE</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p><i class="fas fa-check-circle" style="color:#1e3a5f;"></i> <strong>Located at 63 Jubilee Road, Aba, Abia State</strong> – we've been serving workshops, fleets, and retail customers with quality lubricants.</p>
-            <p><i class="fas fa-check-circle" style="color:#1e3a5f;"></i> Our own <strong>COTTO brand</strong> includes Engine Oils, Automatic Transmission Fluid (ATF) Dexron II & III, Gasket Gum, and Filters – formulated for local conditions.</p>
-            <p><i class="fas fa-check-circle" style="color:#1e3a5f;"></i> We stock Mobil, Total, Castrol, Ammasco, Seahorse and other trusted brands. 100% authentic products – wholesale and retail welcome.</p>
-          </div>
-          <div class="about-highlights">
-            <div class="highlight-card"><i class="fas fa-map-marker-alt"></i><h4>Aba Main</h4><p>63 Jubilee Road</p></div>
-            <div class="highlight-card"><i class="fas fa-handshake"></i><h4>10+ years</h4><p>trusted supplier</p></div>
-            <div class="highlight-card"><i class="fas fa-tags"></i><h4>Wholesale & Retail</h4></div>
-            <div class="highlight-card"><i class="fas fa-shield-alt"></i><h4>100% authentic</h4></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCTS SECTION with images -->
-    <section id="products">
-      <div class="container">
-        <h2 class="section-title">Our Products</h2>
-
-        <!-- COTTO category (with ATF, Gasket Gum, Filter added) -->
-        <div class="category-block">
-          <h3 class="category-title"><i class="fas fa-star"></i> COTTO (Our Brand)</h3>
-          <div class="product-grid">
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/3935331/pexels-photo-3935331.jpeg?auto=compress&cs=tinysrgb&w=400" alt="COTTO Engine Oil" onerror="this.src='https://via.placeholder.com/200x150?text=COTTO+Oil'">
-              <div class="product-name">COTTO Engine Oil 20W-50</div>
-              <div class="product-desc">Premium petrol/diesel engine oil</div>
-              <span class="product-sizes">1L, 4L, 5L, 25L, Drum</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/6550857/pexels-photo-6550857.jpeg?auto=compress&cs=tinysrgb&w=400" alt="COTTO ATF" onerror="this.src='https://via.placeholder.com/200x150?text=COTTO+ATF'">
-              <div class="product-name">COTTO ATF</div>
-              <div class="product-desc">Automatic Transmission Fluid Dexron II & III</div>
-              <span class="product-sizes">1L, 4L (Made in UAE)</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/5709676/pexels-photo-5709676.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gasket Gum" onerror="this.src='https://via.placeholder.com/200x150?text=Gasket+Gum'">
-              <div class="product-name">COTTO Gasket Gum</div>
-              <div class="product-desc">High-temp sealant for engines</div>
-              <span class="product-sizes">100g, 200g</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/3829234/pexels-photo-3829234.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Oil Filter" onerror="this.src='https://via.placeholder.com/200x150?text=Oil+Filter'">
-              <div class="product-name">COTTO Oil Filters</div>
-              <div class="product-desc">Compatible with popular vehicles</div>
-              <span class="product-sizes">Various sizes</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hydraulic Oil" onerror="this.src='https://via.placeholder.com/200x150?text=Hydraulic+Oil'">
-              <div class="product-name">COTTO Hydraulic Oil 68</div>
-              <span class="product-sizes">1L, 4L, 5L, 25L, Drum</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/5823991/pexels-photo-5823991.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Gear Oil" onerror="this.src='https://via.placeholder.com/200x150?text=Gear+Oil'">
-              <div class="product-name">COTTO Gear Oil 90</div>
-              <span class="product-sizes">1L, 4L, 5L, 25L</span>
-            </div>
-          </div>
-          <p style="margin-top:0.5rem;"><em>More COTTO products available – just ask!</em></p>
-        </div>
-
-        <!-- MOBIL -->
-        <div class="category-block">
-          <h3 class="category-title">MOBIL</h3>
-          <div class="product-grid">
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/6550852/pexels-photo-6550852.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mobil Super" onerror="this.src='https://via.placeholder.com/200x150?text=Mobil'">
-              <div class="product-name">Mobil Super 2000</div><span class="product-sizes">1L, 4L, 5L</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/6550850/pexels-photo-6550850.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mobil Delvac" onerror="this.src='https://via.placeholder.com/200x150?text=Delvac'">
-              <div class="product-name">Mobil Delvac</div><span class="product-sizes">1L, 4L, 5L, 25L</span>
-            </div>
-            <div class="product-card">
-              <img class="product-img" src="https://images.pexels.com/photos/6550849/pexels-photo-6550849.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mobil Hydraulic" onerror="this.src='https://via.placeholder.com/200x150?text=Hydraulic'">
-              <div class="product-name">Mobil Hydraulic Oil</div><span class="product-sizes">1L, 4L, 5L, 25L, Drum</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- TOTAL, CASTROL, OTHER brands shortened for brevity but kept -->
-        <div class="category-block">
-          <h3 class="category-title">TOTAL</h3>
-          <div class="product-grid">
-            <div class="product-card"><img class="product-img" src="https://images.pexels.com/photos/6550853/pexels-photo-6550853.jpeg?auto=compress&cs=tinysrgb&w=400" onerror="this.src='https://via.placeholder.com/200x150?text=Total'"><div class="product-name">Total Quartz 5000</div><span class="product-sizes">1L,4L,5L</span></div>
-            <div class="product-card"><img class="product-img" src="https://images.pexels.com/photos/6550854/pexels-photo-6550854.jpeg?auto=compress&cs=tinysrgb&w=400" onerror="this.src='https://via.placeholder.com/200x150?text=Total'"><div class="product-name">Total Rubia</div><span class="product-sizes">1L,4L,5L,25L</span></div>
-            <div class="product-card"><img class="product-img" src="https://images.pexels.com/photos/6550855/pexels-photo-6550855.jpeg?auto=compress&cs=tinysrgb&w=400" onerror="this.src='https://via.placeholder.com/200x150?text=Total'"><div class="product-name">Total Azolla</div><span class="product-sizes">1L,4L,5L</span></div>
-          </div>
-        </div>
-
-        <div class="category-block">
-          <h3 class="category-title">CASTROL</h3>
-          <div class="product-grid">
-            <div class="product-card"><img class="product-img" src="https://images.pexels.com/photos/6550856/pexels-photo-6550856.jpeg?auto=compress&cs=tinysrgb&w=400" onerror="this.src='https://via.placeholder.com/200x150?text=Castrol'"><div class="product-name">Castrol GTX</div><span class="product-sizes">1L,4L,5L</span></div>
-            <div class="product-card"><img class="product-img" src="https://images.pexels.com/photos/6550857/pexels-photo-6550857.jpeg?auto=compress&cs=tinysrgb&w=400" onerror="this.src='https://via.placeholder.com/200x150?text=Castrol'"><div class="product-name">Castrol CRB</div><span class="product-sizes">1L,4L,5L,25L</span></div>
-          </div>
-        </div>
-
-        <div class="category-block">
-          <h3 class="category-title">Other Brands</h3>
-          <div class="other-brands-placeholder">
-            <i class="fas fa-boxes" style="font-size: 2.5rem;"></i>
-            <p><strong>Ammasco, Seahorse, and local brands</strong> – always in stock. Call to inquire.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery">
-      <div class="container">
-        <h2 class="section-title">Gallery</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item"><i class="fas fa-warehouse"></i> Our Shop</div>
-          <div class="gallery-item"><i class="fas fa-oil-can"></i> COTTO ATF</div>
-          <div class="gallery-item"><i class="fas fa-filter"></i> Filters</div>
-          <div class="gallery-item"><i class="fas fa-tools"></i> Workshop</div>
-          <div class="gallery-item"><i class="fas fa-truck"></i> Delivery</div>
-          <div class="gallery-item"><i class="fas fa-store"></i> 63 Jubilee Rd</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT with real details -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-grid">
-          <div class="contact-info-box">
-            <div class="info-item"><i class="fas fa-phone-alt"></i> <span><strong>Call/WhatsApp:</strong><br><a href="tel:+2348034053422">+234 803 405 3422</a><br><a href="https://wa.me/2349033586652?text=Hello%2C%20I'm%20interested%20in%20your%20lubricant%20products" target="_blank">+234 903 358 6652 (WhatsApp)</a></span></div>
-            <div class="info-item"><i class="far fa-envelope"></i> <span><strong>Email:</strong> emmanuelmaduabum@gmail.com</span></div>
-            <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span><strong>Address:</strong> 63 Jubilee Road, Aba, Abia State, Nigeria</span></div>
-            <div class="hours">
-              <p><i class="far fa-clock"></i> <strong>Hours:</strong><br>Monday–Saturday: 8am – 6pm<br>Sunday: Closed</p>
-            </div>
-            <div class="map-placeholder">
-              <i class="fas fa-map-marker-alt"></i> 63 Jubilee Road, Aba (Google Maps)
-            </div>
-          </div>
-          <div>
-            <form id="contactForm">
-              <div class="form-group"><input type="text" id="name" placeholder="Your name" required></div>
-              <div class="form-group"><input type="email" id="email" placeholder="Email address" required></div>
-              <div class="form-group"><input type="tel" id="phone" placeholder="Phone number"></div>
-              <div class="form-group"><textarea id="message" rows="4" placeholder="I'm interested in... (e.g., COTTO ATF 4L)"></textarea></div>
-              <button type="submit" class="submit-btn">Send Message</button>
-              <div id="form-message"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div><h4>COTTO ENTERPRISE</h4><p class="text-small">Quality lubricants – Aba, Nigeria</p></div>
-        <div><h4>Quick links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#contact">Contact</a></li></ul></div>
-        <div><h4>Connect</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
-      </div>
-      <div class="copyright">© 2025 COTTO ENTERPRISE. 63 Jubilee Road, Aba. All rights reserved.</div>
+      <div class="product-name">COTTO Automatic Transmission Fluid</div>
+      <div class="product-desc">Dexron II & III • Made in UAE • 4 Litres</div>
+      <span class="product-sizes">1L, 4L</span>
     </div>
-  </footer>
+    
+    <!-- More COTTO products... -->
+  </div>
+</div>
 
-  <script>
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-    }
+<!-- MOBIL with brand colors -->
+<div class="category-block">
+  <h3 class="category-title">MOBIL</h3>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #0054A4, #003B7A); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-oil-can" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold; letter-spacing: 1px;">MOBIL</div>
+        </div>
+      </div>
+      <div class="product-name">Mobil Super 2000</div>
+      <span class="product-sizes">1L, 4L, 5L</span>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #E2231A, #B01B14); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-truck" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">DELVAC</div>
+        </div>
+      </div>
+      <div class="product-name">Mobil Delvac</div>
+      <span class="product-sizes">1L, 4L, 5L, 25L</span>
+    </div>
+  </div>
+</div>
 
-    // Active link highlight
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    function setActiveLink() {
-      let current = '';
-      const scrollPos = window.scrollY + 100;
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-    window.addEventListener('scroll', setActiveLink);
-    window.addEventListener('load', setActiveLink);
+<!-- TOTAL with new packaging design -->
+<div class="category-block">
+  <h3 class="category-title">TOTAL</h3>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #003399, #002266); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-tachometer-alt" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">QUARTZ</div>
+        </div>
+      </div>
+      <div class="product-name">Total Quartz 5000</div>
+      <span class="product-sizes">1L, 4L, 5L</span>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #FF9933, #CC7A29); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-truck" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">RUBIA</div>
+        </div>
+      </div>
+      <div class="product-name">Total Rubia</div>
+      <span class="product-sizes">1L, 4L, 5L, 25L</span>
+    </div>
+  </div>
+</div>
 
-    // Smooth scroll
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        navMenu.classList.remove('active');
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Form success
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('form-message');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! We\'ll get back to you soon.';
-        form.reset();
-        setTimeout(() => { formMessage.innerHTML = ''; }, 5000);
-      });
-    }
-  </script>
-</body>
-</html>
+<!-- CASTROL -->
+<div class="category-block">
+  <h3 class="category-title">CASTROL</h3>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #00843D, #00662E); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-oil-can" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">GTX</div>
+        </div>
+      </div>
+      <div class="product-name">Castrol GTX</div>
+      <span class="product-sizes">1L, 4L, 5L</span>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-img" style="background: linear-gradient(145deg, #ED1C24, #B0151C); display: flex; align-items: center; justify-content: center; color: white; border-radius: 8px; height: 160px;">
+        <div style="text-align: center;">
+          <i class="fas fa-truck" style="font-size: 3rem;"></i>
+          <div style="margin-top: 0.5rem; font-weight: bold;">CRB</div>
+        </div>
+      </div>
+      <div class="product-name">Castrol CRB</div>
+      <span class="product-sizes">1L, 4L, 5L, 25L</span>
+    </div>
+  </div>
+</div>
